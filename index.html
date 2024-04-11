@@ -72,8 +72,8 @@
       for (let round = 0; round < 5; round++){
         const playerSelection = grammar(prompt("Enter your guess: rock, paper, or scissors"))
         const computerSelection = getComputerChoice(myStrings);
-        console.log("Round",round,"guess:", playerSelection);
-        console.log("Round",round,"guess:",  computerSelection);
+        console.log("Round",round,"player guess:", playerSelection);
+        console.log("Round",round,"computer guess:",  computerSelection);
         console.log("Round",round,"result:",(playRound(playerSelection, computerSelection)));
 
       }
