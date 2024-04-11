@@ -1,0 +1,11 @@
+playing rock paper scissors against a computer
+
+/*
+get the computers choice
+get the players choice
+
+compare the two choices
+decide if it is a tie or if there is a winner
+complete game if winner
+have them go again if tie
+*/
