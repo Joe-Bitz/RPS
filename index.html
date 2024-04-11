@@ -15,8 +15,7 @@
 
           compare the two choices
           decide if it is a tie or if there is a winner
-          complete game if winner
-          have them go again if tie
+          repeat the game 5 times
           */
 
         function getComputerChoice(strings) {
@@ -29,19 +28,15 @@
 
         const myStrings = ["rock", "paper", "scissors"];
         const randomString = getComputerChoice(myStrings);
-      //   console.log(randomString);
-
-      //   let  playerSelection = prompt("enter your RPS guess to beat the computer!");
-      //   return(playerSelection);
-
+     
+//provides formatting for the entered word by the player
       function grammar(word) {
             return word.charAt(0).toLowerCase() + word.slice(1).toLowerCase();
       }
-        // console.log(grammar("tesTiNG ThISSSS"))
      
       
 
-      
+      // logic for the rps game rounds
         function playRound(playerSelection, computerSelection) {
           if (playerSelection === computerSelection) {
               return("It is a tie! Pleaser play again.");
@@ -58,7 +53,7 @@
           else if (playerSelection === "scissors" && computerSelection === "paper"){
               return("You win scissors beats paper!")
           }
-          //
+          
           else if (playerSelection === "paper" && computerSelection === "scissors"){
               return("You lose scissors beats paper!")
           }
