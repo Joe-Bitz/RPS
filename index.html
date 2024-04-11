@@ -7,6 +7,7 @@
     <title>Document</title>
   </head>
   <body>
+    <h1>Too view the game guesses and results open the console. Game will begin 10 seconds after loading the page. </h1>
     <script src="script.js"></script>
     <script>
         /*
@@ -69,7 +70,7 @@
       function playGame(){
         
       for (let round = 0; round < 5; round++){
-        const playerSelection = grammar(prompt("enter your guess: rock, paper, or scissors"))
+        const playerSelection = grammar(prompt("Enter your guess: rock, paper, or scissors"))
         const computerSelection = getComputerChoice(myStrings);
         console.log("Round",round,"guess:", playerSelection);
         console.log("Round",round,"guess:",  computerSelection);
@@ -78,7 +79,7 @@
       }
         
       }
-        playGame();
+        setTimeout(playGame,10000);
     </script>
   </body>
 </html>
