@@ -36,12 +36,13 @@
 
       function grammar(word) {
             return word.charAt(0).toLowerCase() + word.slice(1).toLowerCase();
-
-           
       }
         // console.log(grammar("tesTiNG ThISSSS"))
      
-      function playRound(playerSelection, computerSelection) {
+      
+
+      
+        function playRound(playerSelection, computerSelection) {
           if (playerSelection === computerSelection) {
               return("It is a tie! Pleaser play again.");
 
@@ -64,16 +65,25 @@
           else if (playerSelection === "paper" && computerSelection === "rock"){
               return("You win paper beats rock!")
           }
+          else {
+            return("You will burn in the depths of hell for your selection")
+        }
         
       }
 
-      
-        // const playerSelection = grammar(prompt("enter your guess"))
-        const computerSelection = randomString;
-        console.log(playerSelection);
-        console.log(computerSelection);
+      function playGame(){
+        
+      for (let round = 0; round < 5; round++){
+        const playerSelection = grammar(prompt("enter your guess: rock, paper, or scissors"))
+        const computerSelection = getComputerChoice(myStrings);
+        console.log("Round",round,"guess:", playerSelection);
+        console.log("Round",round,"guess:",  computerSelection);
+        console.log("Round",round,"result:",(playRound(playerSelection, computerSelection)));
 
-        console.log(playRound(playerSelection, computerSelection));
+      }
+        
+      }
+        playGame();
     </script>
   </body>
 </html>
